@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-  <button>按钮组</button>
+  <button>按钮组vv</button>
 </template>
 
 <style scoped>
