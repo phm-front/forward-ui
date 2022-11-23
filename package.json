@@ -1,0 +1,20 @@
+{
+  "name": "forwardui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.2.0",
+    "less": "^4.1.3",
+    "typescript": "^4.9.3",
+    "unplugin-vue-define-options": "^1.0.0",
+    "vite": "^3.2.4",
+    "vue": "^3.2.36"
+  }
+}
