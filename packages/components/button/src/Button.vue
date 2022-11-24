@@ -1,12 +1,11 @@
 <script setup lang="ts">
 
-import { Button } from 'forward-ui';
 </script>
 
 <template>
-  <Button/>
+  <button>测试按钮</button>
 </template>
 
 <style scoped lang="scss">
-
+@use '../style/button'
 </style>

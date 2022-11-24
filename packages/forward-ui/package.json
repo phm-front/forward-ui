@@ -1,5 +1,5 @@
 {
-  "name": "@forward-ui/components",
+  "name": "forward-ui",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@forward-ui/utils": "workspace:^1.0.0"
+    "@forward-ui/components": "workspace:^1.0.0"
   }
 }
