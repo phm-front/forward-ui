@@ -1,6 +1,0 @@
-@use './color' as * with ($main-color: red, $normal-size: 20px);
-
-button {
-  color: $main-color;
-  font-size: $normal-size;
-}

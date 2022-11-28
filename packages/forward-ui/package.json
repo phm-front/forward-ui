@@ -1,15 +1,14 @@
 {
   "name": "forward-ui",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "description": "my ui university",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@forward-ui/components": "workspace:^1.0.0"
   }
 }

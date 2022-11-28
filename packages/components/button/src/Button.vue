@@ -1,11 +1,10 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
-  <button>测试按钮</button>
+  <button>
+    qqqq
+  </button>
 </template>
-
-<style scoped lang="scss">
-@use '../style/button'
-</style>
+<script setup lang="ts">
+import { buttonProps } from "./button";
+const props = defineProps(buttonProps);
+</script>
+<style scoped lang="scss"></style>

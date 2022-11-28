@@ -1,8 +1,8 @@
 {
-  "name": "@forward-ui/utils",
+  "name": "@forward-ui/theme-chalk",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

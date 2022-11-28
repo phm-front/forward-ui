@@ -8,8 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "@forward-ui/theme-chalk": "workspace:^1.0.0",
     "@forward-ui/utils": "workspace:^1.0.0"
   }
 }
