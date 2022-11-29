@@ -1,5 +1,5 @@
 {
-  "name": "examples",
+  "name": "play",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "forward-ui": "workspace:^1.0.0"
+    "forward-ui": "workspace:*"
   }
 }

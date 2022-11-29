@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "dev": "pnpm -C play dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -8,6 +9,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/gulp": "^4.0.10",
+    "@types/node": "^18.11.9",
     "@vitejs/plugin-vue": "^3.2.0",
     "gulp": "^4.0.2",
     "sass": "^1.56.1",
@@ -19,8 +21,8 @@
     "vue": "^3.2.36"
   },
   "dependencies": {
-    "@forward-ui/components": "workspace:^1.0.0",
-    "@forward-ui/theme-chalk": "workspace:^1.0.0",
-    "@forward-ui/utils": "workspace:^1.0.0"
+    "@forward-ui/components": "workspace:*",
+    "@forward-ui/theme-chalk": "workspace:*",
+    "@forward-ui/utils": "workspace:*"
   }
 }
