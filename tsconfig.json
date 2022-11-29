@@ -1,14 +1,12 @@
+// 顶级属性"references"，它支持将TypeScript
+// 的程序项目分割成更小的组成部分，进而可以提高类型检查和编译的速度
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "jsx": "preserve",
-    "strict": true,
-    "target": "ES2015",
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "moduleResolution": "Node",
-    "lib": ["esnext", "dom"],
-    "types": ["unplugin-vue-define-options/macros-global" /* ... */]
-  }
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.web.json" },
+    { "path": "./tsconfig.play.json" },
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.vite-config.json" },
+    { "path": "./tsconfig.vitest.json" }
+  ]
 }

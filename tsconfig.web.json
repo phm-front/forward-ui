@@ -1,0 +1,21 @@
+// 组件包部分配置项
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "preserve",
+    "lib": ["ES2018", "DOM", "DOM.Iterable"],
+    "types": ["unplugin-vue-macros/macros-global"],
+    "skipLibCheck": true
+  },
+  "include": ["packages", "typings/components.d.ts", "typings/env.d.ts"], // 使用 include 来指定应从绝对类型中使用哪些类型
+  "exclude": [ // 提供用于禁用 JavaScript 项目中某个模块的类型获取的配置
+    "node_modules",
+    "**/dist",
+    "**/__tests__/**/*",
+    "**/gulpfile.ts",
+    "**/test-helper",
+    "packages/test-utils",
+    "**/*.md"
+  ]
+}
