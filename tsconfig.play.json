@@ -2,7 +2,7 @@
   "extends": "./tsconfig.web.json",
   "compilerOptions": {
     "allowJs": true,
-    "lib": ["ESNext", "DOM", "DOM.Iterable"]
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
   },
   "include": [
     "packages",
@@ -11,6 +11,7 @@
 
     // playground
     "play/main.ts",
+    "play/app.vue",
     "play/env.d.ts",
     "play/src/**/*"
   ]

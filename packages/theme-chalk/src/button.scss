@@ -1,3 +1,6 @@
-button {
+@use 'mixins/mixins' as *;
+
+@include b(button) {
   color: red;
+  padding: 10px;
 }

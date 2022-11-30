@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@forward-ui/components": "workspace:*",
+    "@forward-ui/hooks": "workspace:*",
     "@forward-ui/theme-chalk": "workspace:*",
     "@forward-ui/utils": "workspace:*"
   }
