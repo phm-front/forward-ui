@@ -18,4 +18,3 @@ defineOptions({
 const ns = useNamespace('button')
 // const props = defineProps(buttonProps);
 </script>
-<style scoped lang="scss"></style>

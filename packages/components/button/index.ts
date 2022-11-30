@@ -1,4 +1,4 @@
-import Button from "./src/Button.vue";
+import Button from "./src/button.vue";
 // export const Button;
 export {
   Button

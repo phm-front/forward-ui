@@ -1,1 +1,3 @@
-export const sum = (a: number, b: number) => a + b;
+export * from './dom'
+export * from './vue'
+export * from './types'

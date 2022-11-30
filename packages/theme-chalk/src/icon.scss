@@ -1,0 +1,24 @@
+@use 'mixins/mixins' as *;
+
+@include b(icon) {
+  --color: inherit;
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--color); // 通过组件内设置css变量串联逻辑
+  font-size: inherit;
+
+  @include when(loading) {
+    animation: rotating 2s linear infinite;
+  }
+
+  svg {
+    height: 1em;
+    width: 1em;
+  }
+}
