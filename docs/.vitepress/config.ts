@@ -26,12 +26,14 @@ export default {
         {
           text: 'Basic 基础组件',
           items: [
-            { text: 'Button按钮', link: '/examples/button' },
-            { text: 'Border边框' },
-          ]
-        }
-      ]
+            { text: 'Button 按钮', link: '/examples/button' },
+            { text: 'Border 边框', link: '/examples/border' },
+          ],
+        },
+      ],
     },
-    socialLinks: [{ icon: 'github', link: 'https://gitee.com/geeksdidi' }],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/phm-front/forward-ui' },
+    ],
   },
 }
