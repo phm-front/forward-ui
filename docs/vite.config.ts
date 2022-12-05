@@ -10,9 +10,8 @@ export default defineConfig({
       setupComponent: false,
       setupSFC: false,
       plugins: {
-        // vue: vue(),
-        vueJsx: vueJsx(), // if needed
+        vueJsx: vueJsx(),
       },
-    }),
+    }) as any
   ],
 });
