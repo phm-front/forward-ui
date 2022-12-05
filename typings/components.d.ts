@@ -6,6 +6,7 @@ declare module '@vue/runtime-core' {
   // GlobalComponents for Volar
   export interface GlobalComponents {
     FIcon: typeof import('../packages/forward-ui')['FIcon']
+    FButton: typeof import('../packages/forward-ui')['FButton']
   }
 }
 

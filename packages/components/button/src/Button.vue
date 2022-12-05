@@ -1,20 +1,25 @@
 <template>
   <button
     :class="[
-      ns.b()
+      ns.b(),
+      ns.m(type),
+      ns.m(size),
+      ns.is('plain', plain)
     ]"
   >
-    qqqq
+    <span>
+      <slot />
+    </span>
   </button>
 </template>
 <script setup lang="ts">
 import { useNamespace } from '@forward-ui/hooks';
-// import { buttonProps } from "./button";
+import { buttonProps } from "./button";
 
 defineOptions({
   name: 'FButton',
 })
 
 const ns = useNamespace('button')
-// const props = defineProps(buttonProps);
+defineProps(buttonProps);
 </script>

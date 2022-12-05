@@ -1,6 +1,44 @@
+@use 'sass:map';
+
+@use 'common/var' as *;
 @use 'mixins/mixins' as *;
+@use 'mixins/function' as *;
+@use 'mixins/cssvar' as *;
+@use 'mixins/button' as *;
 
 @include b(button) {
-  color: red;
-  padding: 10px;
+  @include set-component-css-var('button', $button);
+}
+
+@include b(button) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 1;
+  // min-height will expand when in flex
+  height: map.get($input-height, 'default');
+  white-space: nowrap;
+  cursor: pointer;
+  color: getCssVar('button', 'text-color');
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.1s;
+  font-weight: getCssVar('button', 'font-weight');
+  user-select: none;
+  vertical-align: middle;
+  background-color: getCssVar('button', 'bg-color');
+  border: getCssVar('border');
+  border-color: getCssVar('button', 'border-color');
+
+  & + & {
+    // 相邻按钮左边距
+    margin-left: 12px;
+  }
+  @each $type in $types {
+    @include m($type) {
+      @include button-variant($type);
+    }
+  }
 }

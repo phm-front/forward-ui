@@ -1,13 +1,15 @@
 import { createApp } from "vue";
 import App from "./app.vue";
 import {
-  FIcon
+  FIcon,
+  FButton
 } from 'forward-ui';
 // 引入全部组件样式
-import '@forward-ui/theme-chalk/src/index.scss';
+import './index.scss';
 
 const components = [
-  FIcon
+  FIcon,
+  FButton
 ]
 // 是否已安装标识
 const INSTALLED_KEY = Symbol('INSTALLED_KEY')

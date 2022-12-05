@@ -1,0 +1,13 @@
+@use 'cssvar' as *;
+
+// 按钮不同type的css变量
+@mixin button-variant($type) {
+  $button-color-types: (
+    'text-color': ('color', 'white'),
+    'bg-color': ('color', $type),
+    'border-color': ('color', $type),
+  );
+  @each $varName, $nameMap in $button-color-types {
+    @include css-var-from-global(('button', $varName), $nameMap);
+  }
+}

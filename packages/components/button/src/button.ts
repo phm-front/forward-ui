@@ -1,51 +1,43 @@
 import type { ExtractPropTypes } from 'vue';
+import Button from './button.vue';
 
 export const buttonTypes = [
-  "default",
-  "primary",
-  "success",
-  "warning",
-  "info",
-  "danger",
-];
-export const buttonSizes = ["larg", "default", "small"];
+  'primary',
+  'success',
+  'warning',
+  'info',
+  'danger',
+] as const;
+export const buttonSizes = ['larg', 'default', 'small'] as const;
 
 export const buttonProps = {
-  type: {
-    type: String,
-    validator(value: string) {
-      return buttonTypes.includes(value);
-    },
-    default: "default",
-  },
   size: {
     type: String,
-    validator(value: string) {
+    validator(value: typeof buttonSizes[number]) {
       return buttonSizes.includes(value);
     },
-    default: "default",
   },
-  plain: {
-    type: Boolean,
-    default: false
+  type: {
+    type: String,
+    validator(value: typeof buttonTypes[number]) {
+      return buttonTypes.includes(value);
+    },
+    default: '',
   },
-  text: {
-    type: Boolean,
-    default: false
+  plain: Boolean,
+  text: Boolean,
+  bg: Boolean,
+  link: Boolean,
+  round: Boolean,
+  circle: Boolean,
+  loading: Boolean,
+  disabled: Boolean,
+  icon: String,
+  loadingIcon: {
+    type: String,
+    default: 'Loading',
   },
-  round: {
-    type: Boolean,
-    default: false
-  },
-  loading: {
-    type: Boolean,
-    default: false
-  },
-  disabled: {
-    type: Boolean,
-    default: false
-  },
-  icon: String
 };
 
-export type ButtonPropsType = ExtractPropTypes<typeof buttonProps>
+export type ButtonPropsType = ExtractPropTypes<typeof buttonProps>;
+export type ButtonInstance = InstanceType<typeof Button>;
