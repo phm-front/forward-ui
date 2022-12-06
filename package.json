@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "pnpm -C play dev",
-    "docs": "pnpm -C docs docs:dev",
+    "docs:dev": "pnpm -C docs docs:dev",
     "format": "prettier --write --cache .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "typecheck": "run-p typecheck:web typecheck:play typecheck:node typecheck:vite-config typecheck:vitest",
