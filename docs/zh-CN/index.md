@@ -29,4 +29,3 @@ features:
     title: 按需引入
     details: 直接支持按需引入无需配置任何插件。
 ---
-<!-- 防止点击nav处logo处闪硕，具体原因查看 [.vitepress/lang.js] -->

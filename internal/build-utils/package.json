@@ -1,0 +1,17 @@
+{
+  "name": "@forward-ui/build-utils",
+  "version": "0.0.1",
+  "description": "Build utils for forward-ui",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "unbuild",
+    "dev": "pnpm run stub",
+    "stub": "unbuild --stub"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "unbuild": "^1.0.1"
+  }
+}
