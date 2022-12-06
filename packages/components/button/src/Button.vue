@@ -11,9 +11,9 @@
       ns.is('link', link),
       ns.is('text', text),
       ns.is('bg', bg),
-      ns.is('loading', loading)
+      ns.is('loading', loading),
     ]"
-    :disabled="(disabled || loading)"
+    :disabled="disabled || loading"
     @click="handleClick"
   >
     <template v-if="loading">
@@ -32,14 +32,14 @@
   </button>
 </template>
 <script setup lang="ts">
-import FIcon from '@forward-ui/components/icon';
-import { useNamespace } from '@forward-ui/hooks';
-import { buttonProps } from "./button";
+import FIcon from '@forward-ui/components/icon'
+import { useNamespace } from '@forward-ui/hooks'
+import { buttonProps } from './button'
 
 defineOptions({
   name: 'FButton',
 })
-defineProps(buttonProps);
+defineProps(buttonProps)
 const emit = defineEmits(['click'])
 
 const ns = useNamespace('button')

@@ -77,20 +77,20 @@ $button-icon-span-gap: map.merge(
   );
   // is-round
   @include when('round') {
-    border-radius: getCssVar('border-radius', 'round')
-  };
+    border-radius: getCssVar('border-radius', 'round');
+  }
   // is-circle
   @include when('circle') {
     border-radius: 50%;
     padding: map.get($button-padding-vertical, 'default') - $button-border-width;
-  };
+  }
   // is-disabled
   @include when('disabled') {
     cursor: not-allowed;
     color: getCssVar('button', 'disabled', 'text-color');
     border-color: getCssVar('button', 'disabled', 'border-color');
     background-color: getCssVar('button', 'disabled', 'bg-color');
-  };
+  }
   @include when('plain') {
     @include css-var-from-global(
       ('button', 'hover', 'text-color'),
@@ -104,7 +104,7 @@ $button-icon-span-gap: map.merge(
       ('button', 'hover', 'border-color'),
       ('color', 'primary')
     );
-  };
+  }
   @include when('link') {
     padding: 2px;
     color: getCssVar('button', 'text-color');
@@ -134,7 +134,7 @@ $button-icon-span-gap: map.merge(
         background-color: transparent;
       }
     }
-  };
+  }
   @include when('text') {
     color: getCssVar('button', 'text-color');
     border: 0 solid transparent;
@@ -190,7 +190,7 @@ $button-icon-span-gap: map.merge(
       border-radius: inherit;
       background-color: getCssVar('mask-color', 'extra-light');
     }
-  };
+  }
   & [class*='#{$namespace}-icon'] {
     // 设置距离左边图标margin
     & + span {
@@ -205,7 +205,7 @@ $button-icon-span-gap: map.merge(
     @include m($type) {
       @include button-variant($type);
     }
-  };
+  }
   // 尺寸
   @each $size in (large, small) {
     @include m($size) {
@@ -233,6 +233,6 @@ $button-icon-span-gap: map.merge(
         width: getCssVar('button', 'size');
         padding: map.get($button-padding-vertical, $size) - $button-border-width;
       }
-    };
-  };
+    }
+  }
 }

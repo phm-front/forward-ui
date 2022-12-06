@@ -5,7 +5,6 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 // 引入全部组件样式
 import './index.scss'
-
 ;(async () => {
   const apps = import.meta.glob<{ [key: string]: any }>('./src/*.vue')
   const name = location.pathname.replace(/^\//, '') || 'app'

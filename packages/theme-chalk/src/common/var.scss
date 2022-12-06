@@ -9,25 +9,25 @@ $types: primary, success, warning, danger, error, info;
 $colors: () !default;
 $colors: map.deep-merge(
   (
-    "white": #ffffff,
-    "black": #000000,
-    "primary": (
-      "base": #409eff,
+    'white': #ffffff,
+    'black': #000000,
+    'primary': (
+      'base': #409eff,
     ),
-    "success": (
-      "base": #67c23a,
+    'success': (
+      'base': #67c23a,
     ),
-    "warning": (
-      "base": #e6a23c,
+    'warning': (
+      'base': #e6a23c,
     ),
-    "danger": (
-      "base": #f56c6c,
+    'danger': (
+      'base': #f56c6c,
     ),
-    "error": (
-      "base": #f56c6c,
+    'error': (
+      'base': #f56c6c,
     ),
-    "info": (
-      "base": #909399,
+    'info': (
+      'base': #909399,
     ),
   ),
   $colors
@@ -318,7 +318,7 @@ $button: map.merge(
     'disabled-border-color': getCssVar('disabled', 'border-color'),
     'outline-color': getCssVar('color-primary', 'light-5'),
     'hover-link-text-color': getCssVar('color-info'),
-    'active-color': getCssVar('text-color', 'primary')
+    'active-color': getCssVar('text-color', 'primary'),
   ),
   $button
 );
