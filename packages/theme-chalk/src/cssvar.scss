@@ -79,4 +79,8 @@
     getCssVar('border-width') getCssVar('border-style')
       getCssVar('border-color')
   );
+
+  // overlay & mask
+  @include set-component-css-var('overlay-color', $overlay-color);
+  @include set-component-css-var('mask-color', $mask-color);
 }

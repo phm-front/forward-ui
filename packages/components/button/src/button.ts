@@ -1,4 +1,4 @@
-import type { ExtractPropTypes } from 'vue';
+import type { ExtractPropTypes, Component, PropType } from 'vue';
 import Button from './button.vue';
 
 export const buttonTypes = [
@@ -6,9 +6,9 @@ export const buttonTypes = [
   'success',
   'warning',
   'info',
-  'danger',
+  'danger'
 ] as const;
-export const buttonSizes = ['larg', 'default', 'small'] as const;
+export const buttonSizes = ['', 'default', 'small', 'large'] as const;
 
 export const buttonProps = {
   size: {
@@ -16,13 +16,14 @@ export const buttonProps = {
     validator(value: typeof buttonSizes[number]) {
       return buttonSizes.includes(value);
     },
+    default: ''
   },
   type: {
     type: String,
     validator(value: typeof buttonTypes[number]) {
       return buttonTypes.includes(value);
     },
-    default: '',
+    // default: '',
   },
   plain: Boolean,
   text: Boolean,
@@ -32,9 +33,9 @@ export const buttonProps = {
   circle: Boolean,
   loading: Boolean,
   disabled: Boolean,
-  icon: String,
+  icon: [String, Object, Function] as PropType<string | Component>,
   loadingIcon: {
-    type: String,
+    type: [String, Object, Function] as PropType<string | Component>,
     default: 'Loading',
   },
 };
