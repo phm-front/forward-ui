@@ -43,6 +43,11 @@ $button-icon-span-gap: map.merge(
   border: getCssVar('border');
   border-color: getCssVar('button', 'border-color');
 
+  > span {
+    display: inline-flex;
+    align-items: center;
+  }
+
   &:hover,
   &:focus {
     color: getCssVar('button', 'hover', 'text-color');
