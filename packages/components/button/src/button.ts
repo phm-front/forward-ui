@@ -1,4 +1,5 @@
 import type { ExtractPropTypes, Component, PropType } from 'vue'
+import { Loading } from '@element-plus/icons-vue';
 import Button from './button.vue'
 
 export const buttonTypes = [
@@ -36,7 +37,7 @@ export const buttonProps = {
   icon: [String, Object, Function] as PropType<string | Component>,
   loadingIcon: {
     type: [String, Object, Function] as PropType<string | Component>,
-    default: 'Loading',
+    default: () => Loading,
   },
 }
 
