@@ -9,7 +9,7 @@ hero:
   text: 一个Vue3组件库
   image:
     src: /logo.svg
-    alt: Kitty
+    alt: Forward
   actions:
     - theme: brand
       text: 开始
