@@ -1,11 +1,11 @@
-import { markRaw, nextTick, ref } from 'vue'
+// import { markRaw, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
-import { describe, expect, it, test } from 'vitest'
-import { Loading, Search } from '@element-plus/icons-vue'
+import { describe, expect, it } from 'vitest'
+// import { Loading, Search } from '@element-plus/icons-vue'
 
 import Button from '../src/button.vue'
 
-const AXIOM = 'Rem is the best girl'
+// const AXIOM = 'Rem is the best girl'
 
 describe('Button.vue', () => {
   it('create', () => {
@@ -14,143 +14,149 @@ describe('Button.vue', () => {
     expect(wrapper.classes()).toContain('f-button--primary')
   })
 
-  it('icon', () => {
-    const wrapper = mount(() => <Button icon={markRaw(Search)} />)
+  // it('icon', () => {
+  //   const wrapper = mount(() => <Button icon={markRaw(Search)} />)
 
-    expect(wrapper.findComponent(Search).exists()).toBeTruthy()
-  })
+  //   expect(wrapper.findComponent(Search).exists()).toBeTruthy()
+  // })
 
-  it('loading', () => {
-    const wrapper = mount(() => <Button loading />)
+  // it('nativeType', () => {
+  //   const wrapper = mount(() => <Button nativeType="submit" />)
 
-    expect(wrapper.classes()).toContain('is-loading')
-    expect(wrapper.findComponent(Loading).exists()).toBeTruthy()
-  })
+  //   expect(wrapper.attributes('type')).toBe('submit')
+  // })
 
-  it('size', () => {
-    const wrapper = mount(() => <Button size="large" />)
+  // it('loading', () => {
+  //   const wrapper = mount(() => <Button loading />)
 
-    expect(wrapper.classes()).toContain('f-button--large')
-  })
+  //   expect(wrapper.classes()).toContain('is-loading')
+  //   expect(wrapper.findComponent(Loading).exists()).toBeTruthy()
+  // })
 
-  it('plain', () => {
-    const wrapper = mount(() => <Button plain />)
+  // it('size', () => {
+  //   const wrapper = mount(() => <Button size="large" />)
 
-    expect(wrapper.classes()).toContain('is-plain')
-  })
+  //   expect(wrapper.classes()).toContain('el-button--large')
+  // })
 
-  it('round', () => {
-    const wrapper = mount(() => <Button round />)
-    expect(wrapper.classes()).toContain('is-round')
-  })
+  // it('plain', () => {
+  //   const wrapper = mount(() => <Button plain />)
 
-  it('circle', () => {
-    const wrapper = mount(() => <Button circle />)
+  //   expect(wrapper.classes()).toContain('is-plain')
+  // })
 
-    expect(wrapper.classes()).toContain('is-circle')
-  })
+  // it('round', () => {
+  //   const wrapper = mount(() => <Button round />)
+  //   expect(wrapper.classes()).toContain('is-round')
+  // })
 
-  it('text', async () => {
-    const bg = ref(false)
+  // it('circle', () => {
+  //   const wrapper = mount(() => <Button circle />)
 
-    const wrapper = mount(() => <Button text bg={bg.value} />)
+  //   expect(wrapper.classes()).toContain('is-circle')
+  // })
 
-    expect(wrapper.classes()).toContain('is-text')
+  // it('text', async () => {
+  //   const bg = ref(false)
 
-    bg.value = true
+  //   const wrapper = mount(() => <Button text bg={bg.value} />)
 
-    await nextTick()
+  //   expect(wrapper.classes()).toContain('is-text')
 
-    expect(wrapper.classes()).toContain('is-bg')
-  })
+  //   bg.value = true
 
-  it('link', async () => {
-    const wrapper = mount(() => <Button link />)
+  //   await nextTick()
 
-    expect(wrapper.classes()).toContain('is-link')
-  })
+  //   expect(wrapper.classes()).toContain('is-has-bg')
+  // })
 
-  test('render text', () => {
-    const wrapper = mount(() => (
-      <Button
-        v-slots={{
-          default: () => AXIOM,
-        }}
-      />
-    ))
+  // it('link', async () => {
+  //   const wrapper = mount(() => <Button link />)
 
-    expect(wrapper.text()).toEqual(AXIOM)
-  })
+  //   expect(wrapper.classes()).toContain('is-link')
+  // })
 
-  test('handle click', async () => {
-    const wrapper = mount(() => (
-      <Button
-        v-slots={{
-          default: () => AXIOM,
-        }}
-      />
-    ))
+  // test('render text', () => {
+  //   const wrapper = mount(() => (
+  //     <Button
+  //       v-slots={{
+  //         default: () => AXIOM,
+  //       }}
+  //     />
+  //   ))
 
-    await wrapper.trigger('click')
-    expect(wrapper.emitted()).toBeDefined()
-  })
+  //   expect(wrapper.text()).toEqual(AXIOM)
+  // })
 
-  test('handle click inside', async () => {
-    const wrapper = mount(() => (
-      <Button
-        v-slots={{
-          default: () => <span class="inner-slot"></span>,
-        }}
-      />
-    ))
+  // test('handle click', async () => {
+  //   const wrapper = mount(() => (
+  //     <Button
+  //       v-slots={{
+  //         default: () => AXIOM,
+  //       }}
+  //     />
+  //   ))
 
-    wrapper.find('.inner-slot').trigger('click')
-    expect(wrapper.emitted()).toBeDefined()
-  })
+  //   await wrapper.trigger('click')
+  //   expect(wrapper.emitted()).toBeDefined()
+  // })
 
-  test('loading implies disabled', async () => {
-    const wrapper = mount(() => (
-      <Button
-        v-slots={{
-          default: () => AXIOM,
-        }}
-        loading
-      />
-    ))
+  // test('handle click inside', async () => {
+  //   const wrapper = mount(() => (
+  //     <Button
+  //       v-slots={{
+  //         default: () => <span class="inner-slot"></span>,
+  //       }}
+  //     />
+  //   ))
 
-    await wrapper.trigger('click')
-    expect(wrapper.emitted('click')).toBeUndefined()
-  })
+  //   wrapper.find('.inner-slot').trigger('click')
+  //   expect(wrapper.emitted()).toBeDefined()
+  // })
 
-  it('disabled', async () => {
-    const wrapper = mount(() => <Button disabled />)
+  // test('loading implies disabled', async () => {
+  //   const wrapper = mount(() => (
+  //     <Button
+  //       v-slots={{
+  //         default: () => AXIOM,
+  //       }}
+  //       loading
+  //     />
+  //   ))
 
-    expect(wrapper.classes()).toContain('is-disabled')
-    await wrapper.trigger('click')
-    expect(wrapper.emitted('click')).toBeUndefined()
-  })
+  //   await wrapper.trigger('click')
+  //   expect(wrapper.emitted('click')).toBeUndefined()
+  // })
 
-  it('loading icon', () => {
-    const wrapper = mount(() => (
-      <Button loadingIcon={markRaw(Search)} loading />
-    ))
+  // it('disabled', async () => {
+  //   const wrapper = mount(() => <Button disabled />)
 
-    expect(wrapper.findComponent(Search).exists()).toBeTruthy()
-  })
+  //   expect(wrapper.classes()).toContain('is-disabled')
+  //   await wrapper.trigger('click')
+  //   expect(wrapper.emitted('click')).toBeUndefined()
+  // })
 
-  it('loading slot', () => {
-    const wrapper = mount({
-      setup: () => () =>
-        (
-          <Button
-            v-slots={{ loading: () => <span class="custom-loading">111</span> }}
-            loading={true}
-          >
-            Loading
-          </Button>
-        ),
-    })
+  // it('loading icon', () => {
+  //   const wrapper = mount(() => (
+  //     <Button loadingIcon={markRaw(Search)} loading />
+  //   ))
 
-    expect(wrapper.find('.custom-loading').exists()).toBeTruthy()
-  })
+  //   expect(wrapper.findComponent(Search).exists()).toBeTruthy()
+  // })
+
+  // it('loading slot', () => {
+  //   const wrapper = mount({
+  //     setup: () => () =>
+  //       (
+  //         <Button
+  //           v-slots={{ loading: () => <span class="custom-loading">111</span> }}
+  //           loading={true}
+  //         >
+  //           Loading
+  //         </Button>
+  //       ),
+  //   })
+
+  //   expect(wrapper.find('.custom-loading').exists()).toBeTruthy()
+  // })
 })
