@@ -1,0 +1,76 @@
+// css variables
+:root {
+  // layouts
+  --vp-screen-max-width: 1376px;
+
+  // colors
+  --text-color: var(--f-text-color-primary);
+  --text-color-light: var(--f-text-color-regular);
+  --text-color-lighter: var(--f-text-color-secondary);
+
+  --brand-color: var(--f-color-primary);
+  --brand-color-light: var(--f-color-primary-light-1);
+  --bg-brand-color: var(--f-color-primary-light-9);
+
+  --bg-color: var(--f-bg-color);
+  --bg-color-rgb: 255, 255, 255;
+  --bg-color-soft: #fafafa;
+  --bg-color-mute: #f2f2f2;
+  --border-color: var(--f-border-color);
+  --border-color-light: var(--f-border-color-lighter);
+
+  --font-family: var(--f-font-family);
+  --font-family-mono: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas,
+    'Courier New', monospace;
+
+  // info
+  --success-color: var(--f-color-success);
+  --warning-color: var(--f-color-warning);
+  --danger-color: var(--f-color-danger);
+
+  // header vars
+  --header-height: 55px;
+  --nav-height: 55px; // alias of --header-height
+
+  /* Screen Size */
+  --vp-screen-max-width: 1362px;
+
+  // sidebar
+  --vp-sidebar-width-mobile: 320px;
+  --vp-sidebar-width-small: 266px;
+
+  --sidebar-width-sm: 16rem;
+  --sidebar-width-xs: 20rem;
+  --content-min-width: 16rem;
+  --content-max-width: 48rem;
+
+  --nav-z-index: 11;
+  --sub-nav-z-index: 11;
+  --sidebar-z-index: 40;
+  --overlay-z-index: 30;
+  // --dropdown-z-index: 22;
+
+  // code block vars
+  --code-line-height: 1.4;
+  --code-font-size: var(--f-font-size-base);
+  --code-bg-color: var(--f-fill-color-light);
+  --code-text-color: var(--text-color);
+  --code-font-family: var(--font-family-mono);
+  --code-tooltip-bg-color: var(--code-bg-color);
+  --code-tooltip-color: #0c61c9;
+
+  // tip block
+  --block-tip-bg-color: rgba(var(--f-color-primary-rgb), 0.1);
+  --block-warning-bg-color: rgba(var(--f-color-danger-rgb), 0.1);
+
+  // link
+  --link-active-bg-color: rgba(var(--f-color-primary-rgb), 0.1);
+}
+
+.dark {
+  --bg-color-rgb: 0, 0, 0;
+  --bg-color-soft: #242424;
+  --bg-color-mute: #2c2c2c;
+  --code-tooltip-bg-color: rgba(var(--f-color-primary-rgb), 0.1);
+  --code-tooltip-color: var(--brand-color);
+}
