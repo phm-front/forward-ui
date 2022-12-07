@@ -14,3 +14,11 @@ Commonly used button.
 button/basic
 
 :::
+
+### Button Slots
+
+| Name    | Description                 |
+| ------- | --------------------------- |
+| default | customize default content   |
+| loading | customize loading component |
+| icon    | customize icon component    |

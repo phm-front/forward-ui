@@ -1,3 +1,4 @@
+// TODO:根据文件自动生成json配置
 const getSidebars = () => {
   return {
     '/zh-CN/guild/': [

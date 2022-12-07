@@ -1,4 +1,4 @@
-import { head, nav, sidebar, socialLinks } from './config'
+import { head, mdPlugin, nav, sidebar, socialLinks } from './config'
 import type { UserConfig } from 'vitepress'
 
 const languages = ['zh-CN']
@@ -21,6 +21,10 @@ export const config: UserConfig = {
     langs: languages,
   },
   locales,
+
+  markdown: {
+    config: (md) => mdPlugin(md),
+  },
 }
 
 export default config
