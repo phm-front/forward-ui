@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /guild/installation
+      link: /zh-CN/guild/installation
     - theme: alt
       text: 在 github 上查看
       link: https://github.com/phm-front/forward-ui
@@ -30,3 +30,4 @@ features:
     details: 直接支持按需引入无需配置任何插件。
 ---
 
+<!-- 防止点击nav处logo处闪硕，具体原因查看 [.vitepress/lang.js] -->

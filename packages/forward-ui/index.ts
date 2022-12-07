@@ -1,12 +1,6 @@
 export * from '@forward-ui/components'
-import {
-  FIcon,
-  FButton
-} from '@forward-ui/components';
-const components = [
-  FIcon,
-  FButton
-]
+import { FIcon, FButton } from '@forward-ui/components'
+const components = [FIcon, FButton]
 // 是否已安装标识
 // const INSTALLED_KEY = Symbol('INSTALLED_KEY')
 

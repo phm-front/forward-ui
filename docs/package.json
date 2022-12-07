@@ -1,5 +1,5 @@
 {
-  "name": "docs",
+  "name": "@forward-ui/docs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@forward-ui/build-utils": "workspace:^0.0.1",
     "@vitejs/plugin-vue-jsx": "^2.1.1",
     "vitepress": "1.0.0-alpha.30"
   },
