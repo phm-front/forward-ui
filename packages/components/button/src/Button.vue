@@ -15,6 +15,7 @@
     ]"
     :disabled="disabled || loading"
     @click="handleClick"
+    v-bind="$attrs"
   >
     <template v-if="loading">
       <slot v-if="$slots.loading" name="loading"></slot>
