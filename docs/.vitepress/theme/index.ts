@@ -4,6 +4,7 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import { globals } from '../vitepress'
 import DefaultTheme from 'vitepress/theme'
 import '@forward-ui/theme-chalk/src/index.scss'
+import 'uno.css'
 
 export default {
   ...DefaultTheme,

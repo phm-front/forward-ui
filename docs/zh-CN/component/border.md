@@ -3,14 +3,36 @@ title: Border
 lang: zh-CN
 ---
 
-# Border
+# Border 边框
 
-边框
+我们对边框进行统一规范，可用于按钮、卡片、弹窗等组件里。
 
-## Basic usage
+## 边框样式
 
-:::demo Use `type`, `plain`, `round` and `circle` to define Button's style.
+我们提供了以下几种边框样式，以供选择。
 
-button/basic
+:::demo
+
+border/border
+
+:::
+
+## 圆角
+
+我们提供了以下几种圆角样式，以供选择。
+
+:::demo
+
+border/radius
+
+:::
+
+## 阴影
+
+我们提供了以下几种阴影样式，以供选择。
+
+:::demo
+
+border/shadow
 
 :::
