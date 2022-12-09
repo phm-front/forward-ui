@@ -1,7 +1,7 @@
 import { withInstall } from '@forward-ui/utils'
-import Button from './src/button.vue'
+import button from './src/button.vue'
 
-export const FButton = withInstall(Button)
+export const FButton = withInstall(button)
 export default FButton
 
 export * from './src/button'

@@ -1,5 +1,6 @@
-import type { ExtractPropTypes, Component, PropType } from 'vue'
+import type { Component, ExtractPropTypes } from 'vue'
 import { Loading } from '@element-plus/icons-vue';
+import { iconPropType } from '@forward-ui/utils'
 import Button from './button.vue'
 
 export const buttonTypes = [
@@ -10,7 +11,7 @@ export const buttonTypes = [
   'danger',
 ] as const
 export const buttonSizes = ['', 'default', 'small', 'large'] as const
-import '@vue/runtime-core'
+
 export const buttonProps = {
   size: {
     type: String,
@@ -34,10 +35,10 @@ export const buttonProps = {
   circle: Boolean,
   loading: Boolean,
   disabled: Boolean,
-  icon: [String, Object, Function] as PropType<string | Component>,
+  icon: iconPropType,
   loadingIcon: {
-    type: [String, Object, Function] as PropType<string | Component>,
-    default: () => Loading,
+    type: iconPropType,
+    default: () => Loading as Component,
   },
 } as const
 
