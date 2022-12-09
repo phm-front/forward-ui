@@ -7,6 +7,11 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     FIcon: typeof import('../packages/forward-ui')['FIcon']
     FButton: typeof import('../packages/forward-ui')['FButton']
+    FContainer: typeof import('../packages/forward-ui')['FContainer']
+    FHeader: typeof import('../packages/forward-ui')['FHeader']
+    FFooter: typeof import('../packages/forward-ui')['FFooter']
+    FMain: typeof import('../packages/forward-ui')['FMain']
+    FAside: typeof import('../packages/forward-ui')['FAside']
   }
 }
 

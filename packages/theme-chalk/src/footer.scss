@@ -1,0 +1,15 @@
+@use 'mixins/mixins' as *;
+@use 'mixins/function' as *;
+@use 'mixins/cssvar' as *;
+@use 'common/var' as *;
+
+@include b('footer') {
+  @include set-component-css-var('footer', $footer);
+}
+
+@include b('footer') {
+  flex-shrink: 0;
+  height: getCssVar('footer-height');
+  padding: getCssVar('footer-padding');
+  box-sizing: border-box;
+}

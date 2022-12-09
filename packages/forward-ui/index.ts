@@ -1,8 +1,16 @@
 export * from '@forward-ui/components'
-import { FIcon, FButton } from '@forward-ui/components'
+import {
+  FIcon,
+  FButton,
+  FContainer,
+  FHeader,
+  FFooter,
+  FMain,
+  FAside,
+} from '@forward-ui/components'
 import { INSTALLED_KEY } from '@forward-ui/constants'
-import { App } from '@vue/runtime-core';
-const components = [FIcon, FButton]
+import { App } from '@vue/runtime-core'
+const components = [FIcon, FButton, FContainer, FHeader, FFooter, FMain, FAside]
 // 是否已安装标识
 // const INSTALLED_KEY = Symbol('INSTALLED_KEY')
 

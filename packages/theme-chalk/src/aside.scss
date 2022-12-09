@@ -1,0 +1,15 @@
+@use 'mixins/mixins' as *;
+@use 'mixins/function' as *;
+@use 'mixins/cssvar' as *;
+@use 'common/var' as *;
+
+@include b('aside') {
+  @include set-component-css-var('aside', $aside);
+}
+
+@include b('aside') {
+  flex-shrink: 0;
+  width: getCssVar('aside-width');
+  overflow: auto;
+  box-sizing: border-box;
+}

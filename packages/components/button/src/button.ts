@@ -10,7 +10,7 @@ export const buttonTypes = [
   'danger',
 ] as const
 export const buttonSizes = ['', 'default', 'small', 'large'] as const
-
+import '@vue/runtime-core'
 export const buttonProps = {
   size: {
     type: String,
@@ -39,7 +39,7 @@ export const buttonProps = {
     type: [String, Object, Function] as PropType<string | Component>,
     default: () => Loading,
   },
-}
+} as const
 
 export type ButtonPropsType = ExtractPropTypes<typeof buttonProps>
 export type ButtonInstance = InstanceType<typeof Button>
