@@ -15,7 +15,7 @@
       "forward-ui": ["../packages/forward-ui"],
       "~/*": ["./.vitepress/vitepress/*"]
     },
-    "types": ["../typings/components", "unplugin-vue-macros/macros-global"],
+    "types": ["../typings/components"],
     "jsx": "preserve"
   },
   "include": ["**/*", ".vitepress/**/*"],
