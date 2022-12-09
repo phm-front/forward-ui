@@ -10,9 +10,10 @@
     "strict": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "lib": ["WebWorker"],
+    "lib": ["WebWorker","DOM"],
     "paths": {
-      "forward-ui": ["../packages/forward-ui"]
+      "forward-ui": ["../packages/forward-ui"],
+      "~/*": ["./.vitepress/vitepress/*"]
     },
     "types": ["../typings/components", "unplugin-vue-macros/macros-global"],
     "jsx": "preserve"
