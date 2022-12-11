@@ -12,6 +12,7 @@ declare module '@vue/runtime-core' {
     FFooter: typeof import('../packages/forward-ui')['FFooter']
     FMain: typeof import('../packages/forward-ui')['FMain']
     FAside: typeof import('../packages/forward-ui')['FAside']
+    FDivider: typeof import('../packages/forward-ui')['FDivider']
   }
 }
 

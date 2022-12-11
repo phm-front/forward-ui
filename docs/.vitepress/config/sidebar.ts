@@ -24,6 +24,10 @@ const getSidebars = () => {
           { text: 'Border 边框', link: '/zh-CN/component/border' },
         ],
       },
+      {
+        text: 'Others 其他',
+        items: [{ text: 'Divider 分割线', link: '/zh-CN/component/divider' }],
+      },
     ],
   }
 }

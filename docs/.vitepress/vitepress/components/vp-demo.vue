@@ -56,8 +56,7 @@ const copyCode = async () => {
     <div class="example">
       <Example :file="path" :demo="formatPathDemos[path]" />
 
-      <!-- TODO:Divider组件 -->
-      <div class="divider"></div>
+      <FDivider class="m-0" />
 
       <!-- TODO:Tooltip组件 -->
       <div class="op-btns">
@@ -113,13 +112,6 @@ const copyCode = async () => {
         }
       }
     }
-  }
-
-  .divider {
-    width: 100%;
-    height: 1px;
-    background-color: var(--vp-c-divider-light);
-    margin: 0;
   }
 }
 </style>

@@ -7,10 +7,20 @@ import {
   FFooter,
   FMain,
   FAside,
+  FDivider,
 } from '@forward-ui/components'
 import { INSTALLED_KEY } from '@forward-ui/constants'
 import { App } from '@vue/runtime-core'
-const components = [FIcon, FButton, FContainer, FHeader, FFooter, FMain, FAside]
+const components = [
+  FIcon,
+  FButton,
+  FContainer,
+  FHeader,
+  FFooter,
+  FMain,
+  FAside,
+  FDivider,
+]
 // 是否已安装标识
 // const INSTALLED_KEY = Symbol('INSTALLED_KEY')
 

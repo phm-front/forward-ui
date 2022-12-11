@@ -1,4 +1,5 @@
 @use './config' as *;
+@forward 'function';
 
 // bem
 @mixin b($block) {
