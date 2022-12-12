@@ -1,0 +1,15 @@
+@use 'mixins/mixins' as *;
+
+@include b('row') {
+  position: relative;
+  display: flex;
+  justify-content: var(--f-row-justify-content);
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  @include when('middle') {
+    align-items: center;
+  };
+  @include when('bottom') {
+    align-items: flex-end;
+  };
+};

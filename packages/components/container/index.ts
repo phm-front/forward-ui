@@ -11,3 +11,9 @@ export const FFooter = withInstall(footer)
 export const FMain = withInstall(main)
 export const FAside = withInstall(aside)
 export default FContainer
+
+export type ContainerInstance = InstanceType<typeof container>
+export type AsideInstance = InstanceType<typeof aside>
+export type FooterInstance = InstanceType<typeof footer>
+export type HeaderInstance = InstanceType<typeof header>
+export type MainInstance = InstanceType<typeof main>

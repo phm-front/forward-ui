@@ -1,5 +1,18 @@
 @use './config' as *;
 @forward 'function';
+@use '../common/var' as *;
+@use 'sass:map';
+
+// break point 断点
+@mixin media($key, $map: $breakpoints) {
+  @if map.has-key($map, $key) {
+    @media only screen and #{map.get($map, $key)} {
+      @content;
+    }
+  } @else {
+    @warn 'not find #{$key} point';
+  }
+}
 
 // bem
 @mixin b($block) {

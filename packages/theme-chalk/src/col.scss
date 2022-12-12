@@ -1,0 +1,71 @@
+@use 'mixins/mixins' as *;
+@use 'mixins/config' as *;
+@use 'sass:math';
+
+@include b('col') {
+  box-sizing: border-box;
+  @include when('guttered') {
+    display: block;
+    min-height: 1px;
+  }
+}
+
+$colPre: $namespace + '-col-';
+
+.#{$colPre}0 {
+  display: none;
+  @include when(guttered) {
+    display: none;
+  }
+}
+
+@for $i from 1 through 24 {
+  .#{$colPre + $i} {
+    max-width: math.div($i, 24) * 100%;
+    flex: 0 0 math.div($i, 24) * 100%;
+  }
+  .#{$colPre}offset-#{$i} {
+    margin-left: math.div($i, 24) * 100%;
+  }
+  .#{$colPre}pull-#{$i} {
+    position: relative;
+    right: math.div($i, 24) * 100%;
+  }
+  .#{$colPre}push-#{$i} {
+    position: relative;
+    left: math.div($i, 24) * 100%;
+  }
+}
+
+@mixin col-size($size) {
+  @include media($size) {
+    .#{$colPre + $size}-0 {
+      display: none;
+      @include when(guttered) {
+        display: none;
+      }
+    }
+    @for $i from 1 through 24 {
+      .#{$colPre + $size}-#{$i} {
+        max-width: math.div($i, 24) * 100%;
+        flex: 0 0 math.div($i, 24) * 100%;
+      }
+      .#{$colPre}offset-#{$size}-#{$i} {
+        margin-left: math.div($i, 24) * 100%;
+      }
+      .#{$colPre}pull-#{$size}-#{$i} {
+        position: relative;
+        right: math.div($i, 24) * 100%;
+      }
+      .#{$colPre}push-#{$size}-#{$i} {
+        position: relative;
+        left: math.div($i, 24) * 100%;
+      }
+    }
+  }
+}
+
+$sizes: (xs, sm, md, lg, xl);
+@each $size in $sizes {
+  @include col-size($size);
+}
