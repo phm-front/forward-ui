@@ -7,6 +7,7 @@ importers:
       '@forward-ui/components': workspace:*
       '@forward-ui/constants': workspace:*
       '@forward-ui/hooks': workspace:*
+      '@forward-ui/test-utils': workspace:^0.0.1
       '@forward-ui/theme-chalk': workspace:*
       '@forward-ui/utils': workspace:*
       '@types/gulp': ^4.0.10
@@ -37,6 +38,7 @@ importers:
       '@forward-ui/components': link:packages/components
       '@forward-ui/constants': link:packages/constants
       '@forward-ui/hooks': link:packages/hooks
+      '@forward-ui/test-utils': link:packages/test-utils
       '@forward-ui/theme-chalk': link:packages/theme-chalk
       '@forward-ui/utils': link:packages/utils
       '@types/lodash': 4.14.190

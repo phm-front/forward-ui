@@ -40,6 +40,7 @@
     "@forward-ui/components": "workspace:*",
     "@forward-ui/constants": "workspace:*",
     "@forward-ui/hooks": "workspace:*",
+    "@forward-ui/test-utils": "workspace:^0.0.1",
     "@forward-ui/theme-chalk": "workspace:*",
     "@forward-ui/utils": "workspace:*",
     "@types/lodash": "^4.14.190",
