@@ -4,3 +4,16 @@
     max-width: none !important;
   }
 }
+
+.vp-doc {
+  a {
+    color: var(--f-link-text-color) !important;
+    &:hover {
+      color: var(--f-link-hover-text-color) !important;
+    }
+  }
+}
+
+.f-link.is-disabled {
+  color: var(--f-link-disabled-text-color) !important;
+}
