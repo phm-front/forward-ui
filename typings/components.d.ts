@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     FDivider: typeof import('../packages/forward-ui')['FDivider']
     FRow: typeof import('../packages/forward-ui')['FRow']
     FCol: typeof import('../packages/forward-ui')['FCol']
+    FScrollbar: typeof import('../packages/forward-ui')['FScrollbar']
   }
 }
 

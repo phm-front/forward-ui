@@ -9,6 +9,7 @@ export const buttonTypes = [
   'warning',
   'info',
   'danger',
+  ''
 ] as const
 export const buttonSizes = ['', 'default', 'small', 'large'] as const
 
@@ -25,7 +26,7 @@ export const buttonProps = {
     validator(value: typeof buttonTypes[number]) {
       return buttonTypes.includes(value)
     },
-    // default: '',
+    default: '',
   },
   plain: Boolean,
   text: Boolean,

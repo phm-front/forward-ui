@@ -1,0 +1,71 @@
+@use 'mixins/mixins' as *;
+@use 'mixins/config' as *;
+@use 'mixins/function' as *;
+@use 'common/var' as *;
+@use 'mixins/cssvar' as *;
+
+@include b('scrollbar') {
+  @include set-component-css-var('scrollbar', $scrollbars)
+}
+
+@include b('scrollbar') {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  @include e('wrap') {
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    @include m('hidden-native') {
+      stroke-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  @include e('bar') {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    border-radius: 4px;
+    z-index: 1;
+    @include when('vertical') {
+      top: 2px;
+      width: 6px;
+    }
+    @include when('horizontal') {
+      left: 2px;
+      height: 6px;
+      &>div {
+        height: 100%;
+      }
+    }
+    @include e('thumb') {
+      position: relative;
+      cursor: pointer;
+      border-radius: inherit;
+      box-sizing: border-box;
+      background-color: getCssVar('scrollbar', 'bg-color');
+      transition: background-color getCssVar('transition-duration');
+      opacity: getCssVar('scrollbar', 'opcity');
+      &:hover {
+        opacity: getCssVar('scrollbar', 'hover', 'opcity')
+      }
+    }
+  }
+}
+
+.#{$namespace}-scrollbar-fade {
+  &-enter-active {
+    transition: opacity 340ms ease-out;
+  }
+
+  &-leave-active {
+    transition: opacity 120ms ease-out;
+  }
+
+  &-enter-from,
+  &-leave-active {
+    opacity: 0;
+  }
+}

@@ -1,5 +1,6 @@
 <template>
   <button
+    ref="_button"
     :class="[
       ns.b(),
       ns.m(type),
@@ -33,6 +34,7 @@
   </button>
 </template>
 <script setup lang="ts">
+import { ref, computed } from 'vue';
 import FIcon from '@forward-ui/components/icon'
 import { useNamespace } from '@forward-ui/hooks'
 import { buttonProps } from './button'
@@ -40,12 +42,20 @@ import { buttonProps } from './button'
 defineOptions({
   name: 'FButton',
 })
-defineProps(buttonProps)
+const props = defineProps(buttonProps)
 const emit = defineEmits(['click'])
+
+const _button = ref<HTMLButtonElement>()
 
 const ns = useNamespace('button')
 
 const handleClick = (evt: MouseEvent) => {
   emit('click', evt)
 }
+defineExpose({
+  ref: _button,
+  size: computed(() => props.size),
+  type: computed(() => props.type),
+  disabled: computed(() => props.disabled)
+})
 </script>
