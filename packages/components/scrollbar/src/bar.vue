@@ -5,6 +5,7 @@
     :move="moveY"
     :ratio="ratioY"
     :always="always"
+    @update-move="handleMoveChange"
   ></Thumb>
   <Thumb
     :vertical="false"
@@ -12,6 +13,7 @@
     :move="moveX"
     :ratio="ratioX"
     :always="always"
+    @update-move="handleMoveChange"
   ></Thumb>
 </template>
 
@@ -31,7 +33,14 @@ const handleScroll = (wrap: HTMLDivElement) => {
     moveY.value = (wrap.scrollTop * 100 / wrap.offsetHeight) * props.ratioY
   }
 }
-
+// flag true为vertical
+const handleMoveChange = (flag: boolean, val: number) => {
+  if(flag) {
+    moveY.value = val
+  } else {
+    moveX.value = val
+  }
+}
 defineExpose({
   handleScroll
 })

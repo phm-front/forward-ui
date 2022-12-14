@@ -410,7 +410,7 @@ $scrollbars: map.merge(
     'bg-color': getCssVar('text-color', 'secondary'),
     'hover-bg-color': getCssVar('text-color', 'secondary'),
     'opcity': 0.3,
-    'hover-opcity': 0.5
+    'hover-opcity': 0.5,
   ),
   $scrollbars
 );

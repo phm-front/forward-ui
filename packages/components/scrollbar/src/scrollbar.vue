@@ -48,6 +48,8 @@ const viewRef = ref<HTMLElement>()
 const barRef = ref<InstanceType<typeof Bar>>()
 const sizeWidth = ref('0')
 const sizeHeight = ref('0')
+const maxTransitionY = ref(0)
+const maxTransitionX = ref(0)
 // 滚动比率
 const ratioX = ref(1)
 const ratioY = ref(1)
@@ -55,6 +57,8 @@ const ratioY = ref(1)
 provide(scrollbarContextKey, {
   scrollbarElement: scrollbarRef,
   wrapElement: wrapRef,
+  maxTransitionY,
+  maxTransitionX
 })
 
 const ns = useNamespace('scrollbar')
@@ -72,7 +76,7 @@ const wrapStyle = computed(() => {
     props.wrapStyle,
     {
       height: addUnit(props.height),
-      maxHeight: addUnit(props.maxHeight),
+      maxHeight: addUnit(props.maxHeight)
     },
   ]
 })
@@ -111,9 +115,14 @@ const update = () => {
         realWidth /
         ((barWidth - thumbWidth) / thumbWidth)
       : 1
-  
+
   sizeHeight.value = realHeight < barHeight ? `${realHeight}px` : ''
   sizeWidth.value = realWidth < barWidth ? `${realWidth}px` : ''
+
+  maxTransitionY.value =
+    realHeight < barHeight ? ((barHeight - realHeight) * 100) / realHeight : 0
+  maxTransitionX.value =
+    realWidth < barWidth ? ((barWidth - realWidth) * 100) / realWidth : 0
 }
 
 onMounted(() => {
