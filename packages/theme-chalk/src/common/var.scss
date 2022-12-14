@@ -398,7 +398,7 @@ $footer: map.merge(
 $aside: () !default;
 $aside: map.merge(
   (
-    'width': 300px
+    'width': 300px,
   ),
   $aside
 );
@@ -415,3 +415,26 @@ $scrollbars: map.merge(
   $scrollbars
 );
 
+// Link
+$link: () !default;
+$link: map.merge(
+  (
+    'font-size': getCssVar('font-size-base'),
+    'font-weight': getCssVar('font-weight-primary'),
+    'text-color': getCssVar('text-color-regular'),
+    'hover-text-color': getCssVar('color-primary'),
+    'disabled-text-color': getCssVar('text-color-placeholder'),
+  ),
+  $link
+);
+
+$link-text-color: () !default;
+
+@each $type in $types {
+  $link-text-color: map.merge(
+    $link-text-color,
+    (
+      $type: map.get($colors, $type, 'base'),
+    )
+  ) !global;
+}

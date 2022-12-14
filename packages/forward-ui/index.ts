@@ -10,7 +10,8 @@ import {
   FDivider,
   FRow,
   FCol,
-  FScrollbar
+  FScrollbar,
+  FLink,
 } from '@forward-ui/components'
 import { INSTALLED_KEY } from '@forward-ui/constants'
 import { App } from '@vue/runtime-core'
@@ -25,7 +26,8 @@ const components = [
   FDivider,
   FRow,
   FCol,
-  FScrollbar
+  FScrollbar,
+  FLink,
 ]
 // 是否已安装标识
 // const INSTALLED_KEY = Symbol('INSTALLED_KEY')

@@ -2,6 +2,8 @@
 @forward 'function';
 @use '../common/var' as *;
 @use 'sass:map';
+@forward 'config';
+@forward 'cssvar';
 
 // break point 断点
 @mixin media($key, $map: $breakpoints) {
