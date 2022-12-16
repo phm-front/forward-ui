@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, inject, computed } from 'vue'
+import { ref, inject, computed, onBeforeUnmount } from 'vue'
 import type { CSSProperties } from 'vue'
 import { useEventListener, isClient } from '@vueuse/core'
 import { thumbProps } from './thumb'
@@ -74,18 +74,15 @@ const handleVerMousedown = (e: MouseEvent) => {
     if (props.vertical) {
       distancePersent =
         ((movePageY - pageY) * 100) / Number(props.size?.split('px')[0])
-      res = cacheMove! + distancePersent
+      res = cacheMove + distancePersent
     } else {
       distancePersent =
         ((movePageX - pageX) * 100) / Number(props.size?.split('px')[0])
-      res = cacheMove! + distancePersent
+      res = cacheMove + distancePersent
     }
     const flag = props.vertical ? true : false
     const max = props.vertical ? maxTransitionY : maxTransitionX
-    if (
-      res > 0 &&
-      res < max.value
-    ) {
+    if (res > 0 && res < max.value) {
       // 滚动条移动
       emit('updateMove', flag, res)
     } else if (res <= 0) {
@@ -114,6 +111,12 @@ const mouseleaveHandle = () => {
   }
 }
 // 添加监听事件
-useEventListener(scrollbarElement, 'mouseover', mouseoverHandle)
-useEventListener(scrollbarElement, 'mouseleave', mouseleaveHandle)
+const cleanup1 =useEventListener(scrollbarElement, 'mouseover', mouseoverHandle)
+const cleanup2 =useEventListener(scrollbarElement, 'mouseleave', mouseleaveHandle)
+
+
+onBeforeUnmount(() => {
+  cleanup1()
+  cleanup2()
+})
 </script>

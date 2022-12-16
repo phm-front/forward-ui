@@ -29,10 +29,6 @@ export const scrollbarProps = {
     type: String,
     default: ''
   },
-  noresize: {
-    type: Boolean,
-    default: false
-  },
   tag: {
     type: String,
     default: 'div'

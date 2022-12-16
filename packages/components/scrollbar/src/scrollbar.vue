@@ -32,15 +32,19 @@
 <script setup lang="ts">
 import { computed, ref, provide, onMounted } from 'vue'
 import { useNamespace } from '@forward-ui/hooks'
-import { scrollbarContextKey } from '@forward-ui/utils'
+import { isNumber, useResizeObserver } from '@vueuse/core';
+import { scrollbarContextKey, debugWarn } from '@forward-ui/utils'
 import { scrollbarProps } from './scrollbar'
 import { addUnit } from '@forward-ui/utils'
 import { GAP } from './utils'
 import Bar from './bar.vue'
+import { isObject } from '@vue/shared';
 defineOptions({
   name: 'FScrollbar',
 })
+const COMPONENT_NAME = 'FScrollbar'
 const props = defineProps(scrollbarProps)
+const emit = defineEmits(['scroll'])
 
 const wrapRef = ref<HTMLDivElement>()
 const scrollbarRef = ref<HTMLDivElement>()
@@ -81,9 +85,42 @@ const wrapStyle = computed(() => {
   ]
 })
 
+// TODO: refactor method overrides, due to script setup dts
+// @ts-nocheck
+function scrollTo(xCord: number, yCord?: number): void
+function scrollTo(options: ScrollToOptions): void
+function scrollTo(arg1: unknown, arg2?: number) {
+  if (isObject(arg1)) {
+    wrapRef.value!.scrollTo(arg1)
+  } else if (isNumber(arg1) && isNumber(arg2)) {
+    wrapRef.value!.scrollTo(arg1, arg2)
+  }
+}
+
+const setScrollTop = (value: number) => {
+  if (!isNumber(value)) {
+    debugWarn(COMPONENT_NAME, 'value must be a number')
+    return
+  }
+  wrapRef.value!.scrollTop = value
+}
+
+const setScrollLeft = (value: number) => {
+  if (!isNumber(value)) {
+    debugWarn(COMPONENT_NAME, 'value must be a number')
+    return
+  }
+  wrapRef.value!.scrollLeft = value
+}
+
 const handleScroll = () => {
   if (wrapRef.value) {
     barRef.value?.handleScroll(wrapRef.value)
+
+    emit('scroll', {
+      scrollLeft: wrapRef.value.scrollLeft,
+      scrollTop: wrapRef.value.scrollTop
+    })
   }
 }
 // 更新滚动条状态
@@ -102,6 +139,7 @@ const update = () => {
   // 滚动条实际宽高
   const realHeight = Math.max(props.minSize, thumbHeight)
   const realWidth = Math.max(props.minSize, thumbWidth)
+  console.log(realWidth)
   // 计算滚动比率
   ratioY.value =
     realHeight < barHeight
@@ -125,9 +163,21 @@ const update = () => {
     realWidth < barWidth ? ((barWidth - realWidth) * 100) / realWidth : 0
 }
 
+// 尺寸改变重新计算滚动条相关数据
+useResizeObserver(viewRef, update)
+useResizeObserver(wrapRef, update)
+
 onMounted(() => {
   if (!props.native) {
     update()
   }
+})
+defineExpose({
+  wrapRef,
+  update,
+  handleScroll,
+  scrollTo,
+  setScrollTop,
+  setScrollLeft
 })
 </script>
