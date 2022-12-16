@@ -1,0 +1,14 @@
+<template>
+  <div class="flex">
+    <f-button type="primary" :icon="Edit" />
+    <f-button type="primary" :icon="Share" />
+    <f-button type="primary" :icon="Delete" />
+    <f-button type="primary" :icon="Search">Search</f-button>
+    <f-button type="primary">
+      Upload<f-icon class="f-icon--right"><Upload /></f-icon>
+    </f-button>
+  </div>
+</template>
+<script setup lang="ts">
+import { Delete, Edit, Search, Share, Upload } from '@element-plus/icons-vue'
+</script>

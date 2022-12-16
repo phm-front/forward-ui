@@ -1,7 +1,7 @@
 @use './config' as *;
-@forward 'function';
 @use '../common/var' as *;
 @use 'sass:map';
+@forward 'function';
 @forward 'config';
 @forward 'cssvar';
 

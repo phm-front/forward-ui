@@ -1,4 +1,5 @@
 @use 'cssvar' as *;
+@use 'function' as *;
 
 // 朴素按钮
 @mixin button-plain($type) {

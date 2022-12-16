@@ -137,6 +137,17 @@ $overlay-color: map.merge(
   $overlay-color
 );
 
+// Loading
+// css3 var in packages/theme-chalk/src/loading.scss
+$loading: () !default;
+$loading: map.merge(
+  (
+    'spinner-size': 42px,
+    'fullscreen-spinner-size': 50px,
+  ),
+  $loading
+);
+
 // mask
 $mask-color: () !default;
 $mask-color: map.merge(
