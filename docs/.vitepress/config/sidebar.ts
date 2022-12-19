@@ -23,6 +23,7 @@ const getSidebars = () => {
           { text: 'Button 按钮', link: '/zh-CN/component/button' },
           { text: 'Border 边框', link: '/zh-CN/component/border' },
           { text: 'Link 链接', link: '/zh-CN/component/link' },
+          { text: 'Container 布局容器', link: '/zh-CN/component/container' },
         ],
       },
       {

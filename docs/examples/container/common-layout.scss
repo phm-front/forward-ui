@@ -1,0 +1,31 @@
+.common-layout {
+  .f-header,
+  .f-footer,
+  .f-main,
+  .f-aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .f-header,
+  .f-footer {
+    background-color: var(--f-color-primary-light-7);
+    color: var(--f-text-color-primary);
+    text-align: center;
+  }
+
+  .f-aside {
+    background-color: var(--f-color-primary-light-8);
+    color: var(--f-text-color-primary);
+    text-align: center;
+  }
+
+  .f-main {
+    background-color: var(--f-color-primary-light-9);
+    color: var(--f-text-color-primary);
+    text-align: center;
+
+    height: 150px;
+  }
+}

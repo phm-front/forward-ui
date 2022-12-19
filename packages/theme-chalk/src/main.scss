@@ -9,6 +9,7 @@
 
 @include b('main') {
   flex: 1;
+  flex-basis: auto;
   overflow: auto;
   padding: getCssVar('main-padding');
   box-sizing: border-box;
