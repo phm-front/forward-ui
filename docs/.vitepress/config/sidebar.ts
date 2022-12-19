@@ -24,6 +24,7 @@ const getSidebars = () => {
           { text: 'Border 边框', link: '/zh-CN/component/border' },
           { text: 'Link 链接', link: '/zh-CN/component/link' },
           { text: 'Container 布局容器', link: '/zh-CN/component/container' },
+          { text: 'Scrollbar 滚动条', link: '/zh-CN/component/scrollbar' },
         ],
       },
       {
