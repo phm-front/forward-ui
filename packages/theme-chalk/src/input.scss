@@ -1,0 +1,182 @@
+@use 'sass:map';
+@use 'mixins/mixins' as *;
+@use 'mixins/cssvar' as *;
+@use 'mixins/config.scss' as *;
+@use 'mixins/function.scss' as *;
+@use 'common/var.scss' as *;
+@use 'common/var.scss' as *;
+
+@mixin mixed-input-border($color) {
+  box-shadow: 0 0 0 1px $color inset;
+}
+
+@include b('input') {
+  @include set-component-css-var('input', $input);
+}
+@include b('textarea') {
+  @include set-component-css-var('input', $input);
+}
+
+@include b('input') {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  vertical-align: middle;
+  line-height: getCssVar('input', 'height');
+  box-sizing: border-box;
+  @include e('wrapper') {
+    flex-grow: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $border-width calc(map.get($input-padding-horizontal, 'default') - $border-width);
+    background-color: getCssVar('input', 'bg-color');
+    background-image: none;
+    border-radius: getCssVar('input', 'border-radius');
+    transition: map.get($transition, 'box-shadow');
+    box-shadow: 0 0 0 1px getCssVar('input', 'border-color') inset;
+    &:hover {
+      box-shadow: 0 0 0 1px getCssVar('input', 'hover-border-color') inset;
+    }
+    @include when('focus') {
+      box-shadow: 0 0 0 1px getCssVar('input', 'focus-border-color') inset;
+    }
+  }
+  @include e('inner') {
+    @include set-css-var-value('input-inner-height', calc(getCssVar('input', 'height') - 2px));
+    flex-grow: 1;
+    width: 100%;
+    height: getCssVar('input-inner-height');
+    line-height: getCssVar('input-inner-height');
+    color: getCssVar('input', 'text-color');
+    font-size: getCssVar('font-size', 'base');
+    border: none;
+    outline: none;
+    background: none;
+    box-sizing: border-box;
+    padding: 0;
+    &::placeholder {
+      color: getCssVar('input', 'placeholder-color')
+    }
+  }
+  @each $slot in ('prefix', 'suffix') {
+    @include e($slot) {
+      display: inline-flex;
+      white-space: nowrap;
+      flex-shrink: 0;
+      flex-wrap: nowrap;
+      height: 100%;
+      text-align: center;
+      color: var(
+        #{getCssVarName('input-icon-color')},
+        map.get($input, 'icon-color')
+      );
+      transition: all getCssVar('transition-duration');
+      pointer-events: none;
+    }
+    @include e(#{$slot}-inner) {
+      pointer-events: all;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      @if $slot == prefix {
+        > :last-child {
+          margin-right: 8px;
+        }
+
+        > :first-child {
+          &,
+          &.#{$namespace}-input__icon {
+            margin-left: 0;
+          }
+        }
+      } @else {
+        > :first-child {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+  & .#{$namespace}-input__icon {
+    height: inherit;
+    line-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all getCssVar('transition-duration');
+    margin-left: 8px;
+  }
+  & .#{$namespace}-input__clear,
+  & .#{$namespace}-input__password {
+    color: getCssVar('input-icon-color');
+    font-size: map.get($input-font-size, 'default');
+    cursor: pointer;
+
+    &:hover {
+      color: getCssVar('input-clear-hover-color');
+    }
+  }
+  @include when('disabled') {
+    cursor: not-allowed;
+    .#{$namespace}-input__wrapper {
+      background-color: map.get($input-disabled, 'fill');
+      @include mixed-input-border(map.get($input-disabled, 'border'))
+    }
+    .#{$namespace}-input__inner {
+      color: map.get($input-disabled, 'text-color');
+      -webkit-text-fill-color: map.get($input-disabled, 'text-color');
+      cursor: not-allowed;
+      &::placeholder {
+        color: map.get($input-disabled, 'placeholder-color');
+      }
+    }
+  }
+}
+
+@include b('textarea') {
+  position: relative;
+  display: inline-flex;
+  vertical-align: bottom;
+  width: 100%;
+  box-sizing: border-box;
+  @include e('inner') {
+    position: relative;
+    display: block;
+    width: 100%;
+    line-height: 1.5;
+    padding: 5px map.get($input-padding-horizontal, 'default')-$border-width;
+    resize: vertical;
+    font-size: getCssVar('font-size', 'base');
+    font-family: inherit;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 1px getCssVar('input', 'border-color') inset;
+    border-radius: getCssVar('input', 'border-radius');
+    border: none;
+    outline: none;
+    background-color: getCssVar('input', 'bg-color');
+    background-image: none;
+    color: getCssVar('input', 'text-color');
+    &::placeholder {
+      color: getCssVar('input', 'placeholder-color')
+    }
+    &:hover {
+      box-shadow: 0 0 0 1px getCssVar('input', 'hover-border-color') inset;
+    }
+    &:focus {
+      box-shadow: 0 0 0 1px getCssVar('input', 'focus-border-color') inset;
+    }
+  }
+  @include when('disabled') {
+    cursor: not-allowed;
+    .#{$namespace}-textarea__inner {
+      background-color: map.get($input-disabled, 'fill');
+      @include mixed-input-border(map.get($input-disabled, 'border'));
+      color: map.get($input-disabled, 'text-color');
+      cursor: not-allowed;
+      resize: none;
+      &::placeholder {
+        color: map.get($input-disabled, 'placeholder-color');
+      }
+    }
+  }
+}

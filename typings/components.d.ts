@@ -17,6 +17,7 @@ declare module '@vue/runtime-core' {
     FCol: typeof import('../packages/forward-ui')['FCol']
     FScrollbar: typeof import('../packages/forward-ui')['FScrollbar']
     FLink: typeof import('../packages/forward-ui')['FLink']
+    FInput: typeof import('../packages/forward-ui')['FInput']
   }
 }
 

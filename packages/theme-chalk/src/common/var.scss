@@ -148,6 +148,16 @@ $loading: map.merge(
   $loading
 );
 
+$input-padding-horizontal: () !default;
+$input-padding-horizontal: map.merge(
+  (
+    'large': 16px,
+    'default': 12px,
+    'small': 8px,
+  ),
+  $input-padding-horizontal
+);
+
 // mask
 $mask-color: () !default;
 $mask-color: map.merge(
@@ -449,3 +459,41 @@ $link-text-color: () !default;
     )
   ) !global;
 }
+
+$input-disabled: () !default;
+$input-disabled: map.merge(
+  (
+    'fill': getCssVar('disabled-bg-color'),
+    'border': getCssVar('disabled-border-color'),
+    'text-color': getCssVar('disabled-text-color'),
+    'placeholder-color': getCssVar('text-color-placeholder'),
+  ),
+  $input-disabled
+);
+
+$input: () !default;
+$input: map.merge(
+  (
+    'text-color': getCssVar('text-color-regular'),
+    'bg-color': getCssVar('fill-color-blank'),
+    'border-radius': map.get($border-radius, 'base'),
+    'height': map.get($common-component-size, 'default'),
+    'border-color': getCssVar('border-color'),
+    'hover-border-color': getCssVar('border-color-hover'),
+    'focus-border-color': getCssVar('color-primary'),
+    'placeholder-color': getCssVar('text-color-placeholder'),
+    'icon-color': getCssVar('text-color-placeholder'),
+    'clear-hover-color': getCssVar('text-color-secondary'),
+  ),
+  $input
+);
+
+$input-font-size: () !default;
+$input-font-size: map.merge(
+  (
+    'large': 14px,
+    'default': 14px,
+    'small': 12px,
+  ),
+  $input-font-size
+);
