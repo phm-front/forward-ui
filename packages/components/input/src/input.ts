@@ -64,7 +64,26 @@ export const inputProps = {
   },
   autosize: {
     type: definePropType<autosizeType>([Boolean, Object])
-  }
+  },
+  readonly: {
+    type: Boolean,
+    default: false
+  },
+  form: {
+    type: String
+  },
+  label: {
+    type: String,
+    default: undefined,
+  },
+  tabindex: {
+    type: [String, Number],
+    default: 0,
+  },
+  validateEvent: {
+    type: Boolean,
+    default: true,
+  },
 }
 
 export type InputProps = ExtractPropTypes<typeof inputProps>
