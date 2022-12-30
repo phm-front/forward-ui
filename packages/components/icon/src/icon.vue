@@ -14,6 +14,7 @@ import { iconProps } from './icon'
 
 defineOptions({
   name: 'FIcon',
+  inheritAttrs: false,
 })
 
 const ns = useNamespace('icon')

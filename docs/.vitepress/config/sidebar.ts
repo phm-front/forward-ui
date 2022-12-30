@@ -28,6 +28,10 @@ const getSidebars = () => {
         ],
       },
       {
+        text: 'Form 表单组件',
+        items: [{ text: 'Switch 开关', link: '/zh-CN/component/switch' }],
+      },
+      {
         text: 'Others 其他',
         items: [{ text: 'Divider 分割线', link: '/zh-CN/component/divider' }],
       },
