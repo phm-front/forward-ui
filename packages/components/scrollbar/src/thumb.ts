@@ -1,5 +1,5 @@
 import type { ExtractPropTypes } from 'vue';
-import thumb from './thumb.vue';
+import type thumb from './thumb.vue';
 
 export const thumbProps = {
   vertical: Boolean,

@@ -1,5 +1,5 @@
 import type { PropType, ExtractPropTypes } from 'vue'
-import col from './col.vue'
+import type col from './col.vue'
 
 export interface ColSizeObject {
   span?: number

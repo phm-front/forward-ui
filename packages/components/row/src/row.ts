@@ -1,5 +1,5 @@
 import type { ExtractPropTypes } from 'vue'
-import Row from './row.vue'
+import type Row from './row.vue'
 
 export const RowJustify = [
   'start',

@@ -10,6 +10,7 @@ importers:
       '@forward-ui/test-utils': workspace:^0.0.1
       '@forward-ui/theme-chalk': workspace:*
       '@forward-ui/utils': workspace:*
+      '@popperjs/core': ^2.11.6
       '@types/gulp': ^4.0.10
       '@types/jsdom': ^20.0.1
       '@types/lodash': ^4.14.190
@@ -42,6 +43,7 @@ importers:
       '@forward-ui/test-utils': link:packages/test-utils
       '@forward-ui/theme-chalk': link:packages/theme-chalk
       '@forward-ui/utils': link:packages/utils
+      '@popperjs/core': 2.11.6
       '@types/lodash': 4.14.190
       '@types/lodash-es': 4.17.6
       '@vueuse/core': 9.6.0_vue@3.2.36
@@ -761,6 +763,10 @@ packages:
   /@polka/url/1.0.0-next.21:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
+
+  /@popperjs/core/2.11.6:
+    resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
+    dev: false
 
   /@rollup/plugin-alias/4.0.2_rollup@3.6.0:
     resolution: {integrity: sha512-1hv7dBOZZwo3SEupxn4UA2N0EDThqSSS+wI1St1TNTBtOZvUchyIClyHcnDcjjrReTPZ47Faedrhblv4n+T5UQ==}

@@ -43,6 +43,7 @@
     "@forward-ui/test-utils": "workspace:^0.0.1",
     "@forward-ui/theme-chalk": "workspace:*",
     "@forward-ui/utils": "workspace:*",
+    "@popperjs/core": "^2.11.6",
     "@types/lodash": "^4.14.190",
     "@types/lodash-es": "^4.17.6",
     "@vueuse/core": "^9.6.0",

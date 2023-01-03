@@ -33,7 +33,7 @@
         <f-button :icon="Search"></f-button>
       </template>
     </f-input>
-    <f-input v-model="input1" size="large" placeholder="large input" />
+    <f-input readonly v-model="input1" size="large" placeholder="large input" />
     <f-input v-model="input1" placeholder="default input" />
     <f-input v-model="input1" size="small" placeholder="small input" />
     <f-input v-model="input" maxlength="10" show-word-limit></f-input>

@@ -1,5 +1,5 @@
 import type { ExtractPropTypes } from 'vue';
-import bar from './bar.vue';
+import type bar from './bar.vue';
 
 export const barProps = {
   always: {

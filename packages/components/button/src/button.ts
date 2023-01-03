@@ -1,7 +1,7 @@
 import type { Component, ExtractPropTypes } from 'vue'
 import { Loading } from '@element-plus/icons-vue';
 import { iconPropType } from '@forward-ui/utils'
-import Button from './button.vue'
+import type Button from './button.vue'
 
 export const buttonTypes = [
   'primary',

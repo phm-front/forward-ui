@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType, StyleValue } from 'vue';
-import input from './input.vue';
+import type input from './input.vue';
 import { componentSizes } from '@forward-ui/constants';
 import type { ComponentSize } from '@forward-ui/constants';
 import { definePropType, iconPropType } from '@forward-ui/utils';

@@ -1,5 +1,5 @@
 import type { ExtractPropTypes, PropType, StyleValue } from 'vue';
-import scrollbar from './scrollbar.vue';
+import type scrollbar from './scrollbar.vue';
 export const scrollbarProps = {
   height: {
     type: [String, Number] as PropType<string | number>,
