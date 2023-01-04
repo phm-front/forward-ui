@@ -10,7 +10,7 @@ import { popperProps } from './popper';
 import type { Instance as PopperInstance } from '@popperjs/core'
 import type { FPopperInjectionContext } from '@forward-ui/utils'
 defineOptions({
-  name: 'FPopperRoot',
+  name: 'FPopper',
   inheritAttrs: false,
 });
 
@@ -46,7 +46,7 @@ const popperProvides = {
 } as FPopperInjectionContext
 
 defineExpose(popperProvides)
-
+console.log(popperProvides)
 provide(POPPER_INJECTION_KEY, popperProvides)
 
 </script>

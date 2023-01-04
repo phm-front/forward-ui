@@ -35,7 +35,7 @@ export const inputProps = {
     default: false
   },
   size: {
-    type: String,
+    type: definePropType<ComponentSize>(String),
     validator(value: ComponentSize) {
       return componentSizes.includes(value)
     },
@@ -53,7 +53,7 @@ export const inputProps = {
     default: 'off'
   },
   resize: {
-    type: String,
+    type: definePropType<typeof resize[number]>(String),
     validator(value: typeof resize[number]) {
       return resize.includes(value)
     }

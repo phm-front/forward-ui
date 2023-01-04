@@ -1,5 +1,6 @@
 import type { ExtractPropTypes } from 'vue'
 import type Popper from './popper.vue'
+import { definePropType } from '@forward-ui/utils';
 
 const effects = ['light', 'dark'] as const
 const triggers = ['click', 'contextmenu', 'hover', 'focus'] as const
@@ -25,7 +26,7 @@ export type PopperTrigger = typeof triggers[number]
 
 export const popperProps = {
   role: {
-    type: String,
+    type: definePropType<typeof roleTypes[number]>(String),
     validator(value: typeof roleTypes[number]) {
       return roleTypes.includes(value)
     },

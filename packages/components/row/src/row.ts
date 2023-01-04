@@ -1,4 +1,5 @@
 import type { ExtractPropTypes } from 'vue'
+import { definePropType } from '@forward-ui/utils';
 import type Row from './row.vue'
 
 export const RowJustify = [
@@ -20,14 +21,14 @@ export const rowProps = {
     default: 0
   },
   justify: {
-    type: String,
+    type: definePropType<typeof RowJustify[number]>(String),
     validator(value: typeof RowJustify[number]) {
       return RowJustify.includes(value)
     },
     default: 'flex-start'
   },
   align: {
-    type: String,
+    type: definePropType<typeof RowAlign[number]>(String),
     validator(value: typeof RowAlign[number]) {
       return RowAlign.includes(value)
     },

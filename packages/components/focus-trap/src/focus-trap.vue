@@ -1,3 +1,4 @@
+<!-- 陷阱焦点 陷阱焦点在实现遮罩层时很有用，比如模态对话框，它不应该允许在该组件打开时转移焦点。 -->
 <template>
   <slot :handle-keydown="onKeydown" />
 </template>

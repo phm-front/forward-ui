@@ -29,7 +29,7 @@ defineOptions({
 });
 
 const props = defineProps(popperTriggerProps)
-
+// console.log(inject(POPPER_INJECTION_KEY, undefined))
 const { role, triggerRef } = inject(POPPER_INJECTION_KEY, undefined)!
 
 useForwardRef(triggerRef)
