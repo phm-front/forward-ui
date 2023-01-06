@@ -46,7 +46,6 @@ const popperProvides = {
 } as FPopperInjectionContext
 
 defineExpose(popperProvides)
-console.log(popperProvides)
 provide(POPPER_INJECTION_KEY, popperProvides)
 
 </script>

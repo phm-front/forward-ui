@@ -5,10 +5,10 @@ import type { TooltipTriggerType } from '@forward-ui/components/tooltip';
 export type ElTooltipInjectionContext = {
   // controlled: Ref<boolean>
   id: Ref<string>
-  // open: Ref<boolean>
+  open: Ref<boolean>
   // trigger: Ref<Arrayable<TooltipTriggerType>>
-  // onOpen: (e?: Event) => void
-  // onClose: (e?: Event) => void
+  onOpen: (e?: Event) => void
+  onClose: (e?: Event) => void
   // onToggle: (e: Event) => void
   // onShow: () => void
   // onHide: () => void

@@ -1,12 +1,13 @@
 import { definePropType } from '@forward-ui/utils';
 import { popperContentProps } from '@forward-ui/components/popper';
-import { useNamespace } from '@forward-ui/hooks';
+import { useNamespace, useDelayedToggleProps } from '@forward-ui/hooks';
 
 import type { ExtractPropTypes } from 'vue';
 
 const ns = useNamespace('tooltip')
 
 export const tooltipContentProps = {
+  ...useDelayedToggleProps,
   ...popperContentProps,
   appendTo: {
     type: definePropType<string | HTMLElement>([String, Object]),
