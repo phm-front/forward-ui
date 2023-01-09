@@ -179,6 +179,8 @@ onMounted(() => {
         })
 
         updateHandle = watch(
+          // getBoundingClientRect方法可以自定义 ps: { getBoundingClientRect() { return ref().value } }
+          // 用于实现virtual-ref
           () => referenceEl.getBoundingClientRect(),
           () => updatePopper(),
           {

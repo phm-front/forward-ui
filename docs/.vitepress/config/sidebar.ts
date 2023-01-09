@@ -32,6 +32,10 @@ const getSidebars = () => {
         items: [{ text: 'Switch 开关', link: '/zh-CN/component/switch' }],
       },
       {
+        text: 'Feedback 反馈组件',
+        items: [{ text: 'Tooltip 文字提示', link: '/zh-CN/component/tooltip' }],
+      },
+      {
         text: 'Others 其他',
         items: [{ text: 'Divider 分割线', link: '/zh-CN/component/divider' }],
       },
