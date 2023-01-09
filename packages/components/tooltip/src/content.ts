@@ -20,7 +20,7 @@ export const tooltipContentProps = {
     type: Boolean,
     default: false,
   },
-  persistent: Boolean,
+  persistent: Boolean, // 是否持续显示content
   ariaLabel: String,
   visible: {
     type: definePropType<boolean | null>(Boolean),

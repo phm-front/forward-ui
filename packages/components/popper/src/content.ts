@@ -71,11 +71,11 @@ export const popperContentProps = {
     default: 'dark',
   },
   visible: Boolean,
-  enterable: {
+  enterable: { // 鼠标是否可进入到 content 中
     type: Boolean,
     default: true,
   },
-  pure: Boolean,
+  pure: Boolean, // padding 是否为0
   focusOnShow: {
     type: Boolean,
     default: false,
