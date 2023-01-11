@@ -10,7 +10,7 @@ importers:
       '@forward-ui/test-utils': workspace:^0.0.1
       '@forward-ui/theme-chalk': workspace:*
       '@forward-ui/utils': workspace:*
-      '@popperjs/core': ^2.11.6
+      '@popperjs/core': npm:@sxzz/popperjs-es@^2.11.7
       '@types/gulp': ^4.0.10
       '@types/jsdom': ^20.0.1
       '@types/lodash': ^4.14.190
@@ -44,7 +44,7 @@ importers:
       '@forward-ui/test-utils': link:packages/test-utils
       '@forward-ui/theme-chalk': link:packages/theme-chalk
       '@forward-ui/utils': link:packages/utils
-      '@popperjs/core': 2.11.6
+      '@popperjs/core': /@sxzz/popperjs-es/2.11.7
       '@types/lodash': 4.14.190
       '@types/lodash-es': 4.17.6
       '@vueuse/core': 9.6.0_vue@3.2.36
@@ -769,10 +769,6 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@popperjs/core/2.11.6:
-    resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
-    dev: false
-
   /@rollup/plugin-alias/4.0.2_rollup@3.6.0:
     resolution: {integrity: sha512-1hv7dBOZZwo3SEupxn4UA2N0EDThqSSS+wI1St1TNTBtOZvUchyIClyHcnDcjjrReTPZ47Faedrhblv4n+T5UQ==}
     engines: {node: '>=14.0.0'}
@@ -914,6 +910,10 @@ packages:
       colors: 1.2.5
       string-argv: 0.3.1
     dev: true
+
+  /@sxzz/popperjs-es/2.11.7:
+    resolution: {integrity: sha512-Ccy0NlLkzr0Ex2FKvh2X+OyERHXJ88XJ1MXtsI9y9fGexlaXaVTPzBCRBwIxFkORuOb+uBqeu+RqnpgYTEZRUQ==}
+    dev: false
 
   /@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npm.taobao.org/@tootallnate/once/-/once-2.0.0.tgz}
