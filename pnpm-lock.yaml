@@ -129,6 +129,9 @@ importers:
   packages/hooks:
     specifiers: {}
 
+  packages/test-utils:
+    specifiers: {}
+
   packages/theme-chalk:
     specifiers: {}
 

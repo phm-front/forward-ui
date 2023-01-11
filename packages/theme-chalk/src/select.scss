@@ -1,0 +1,20 @@
+@use 'sass:map';
+
+@use 'mixins/mixins.scss' as *;
+@use 'common/var.scss' as *;
+@use 'mixins/config.scss' as *;
+
+@include b('select') {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  line-height: map.get($input-height, 'default');
+  @each $size in (large, small) {
+    @include m($size) {
+      line-height: map.get($input-height, $size);
+    }
+  }
+  .#{$namespace}-input {
+    display: flex;
+  }
+}

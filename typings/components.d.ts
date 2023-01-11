@@ -20,6 +20,8 @@ declare module '@vue/runtime-core' {
     FInput: typeof import('../packages/forward-ui')['FInput']
     FSwitch: typeof import('../packages/forward-ui')['FSwitch']
     FPopper: typeof import('../packages/forward-ui')['FPopper']
+    FTooltip: typeof import('../packages/forward-ui')['FTooltip']
+    FSelect: typeof import('../packages/forward-ui')['FSelect']
   }
 }
 

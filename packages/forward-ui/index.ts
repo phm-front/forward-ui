@@ -15,7 +15,8 @@ import {
   FInput,
   FPopper,
   FSwitch,
-  FTooltip
+  FTooltip,
+  FSelect
 } from '@forward-ui/components'
 import { INSTALLED_KEY } from '@forward-ui/constants'
 import { App } from '@vue/runtime-core'
@@ -35,7 +36,8 @@ const components = [
   FInput,
   FPopper,
   FSwitch,
-  FTooltip
+  FTooltip,
+  FSelect
 ]
 // 是否已安装标识
 // const INSTALLED_KEY = Symbol('INSTALLED_KEY')
