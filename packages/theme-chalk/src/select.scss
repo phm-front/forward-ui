@@ -14,7 +14,7 @@
       line-height: map.get($input-height, $size);
     }
   }
-  // .#{$namespace}-input {
-  //   display: flex;
-  // }
+  .#{$namespace}-input {
+    display: flex;
+  }
 }
