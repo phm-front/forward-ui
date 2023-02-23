@@ -1,5 +1,6 @@
 export { isBoolean, isNumber } from '@vueuse/core'
-export { isString } from '@vue/shared'
+export { isString, isFunction, isObject } from '@vue/shared'
+export { isVNode } from 'vue'
 import { isString } from '@vue/shared'
 
 export const isUndefined = (val: any): val is undefined => val === undefined
