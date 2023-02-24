@@ -131,11 +131,6 @@ const message: MessageFn &
 ) => {
   if (!isClient) return { close: () => undefined }
 
-  // TODO:超出限制
-  // if (isNumber(messageConfig.max) && instances.length >= messageConfig.max) {
-  //   return { close: () => undefined }
-  // }
-
   const normalized = normalizeOptions(options)
 
   if (normalized.grouping && instances.length) {

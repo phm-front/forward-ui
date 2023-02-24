@@ -33,7 +33,10 @@ const getSidebars = () => {
       },
       {
         text: 'Feedback 反馈组件',
-        items: [{ text: 'Tooltip 文字提示', link: '/zh-CN/component/tooltip' }],
+        items: [
+          { text: 'Tooltip 文字提示', link: '/zh-CN/component/tooltip' },
+          { text: 'Message 消息提示', link: '/zh-CN/component/message' },
+        ],
       },
       {
         text: 'Others 其他',
