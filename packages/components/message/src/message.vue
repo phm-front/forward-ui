@@ -92,7 +92,7 @@ function close() {
 }
 
 onMounted(() => {
-  // startTimer()
+  startTimer()
   visible.value = true
 })
 
